@@ -1,11 +1,23 @@
 import GlobalStyles from './components/GlobalStyles';
+import { Switch, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import GitHub from './pages/GitHub';
 
 function App() {
 	return (
-		<div>
+		<>
 			<GlobalStyles />
-			<h1>kosh</h1>
-		</div>
+
+			<Switch>
+				<Route path={['/', '/homepage']} exact>
+					<HomePage />
+				</Route>
+
+				<Route path='/github' exact>
+					<GitHub />
+				</Route>
+			</Switch>
+		</>
 	);
 }
 

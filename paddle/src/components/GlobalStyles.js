@@ -7,10 +7,10 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
 }
 html{
-  font-size: 11px;
+  font-size: 10px;
   color: #4F5665;
   &::-webkit-scrollbar{
-            width: .7rem;
+            width: .9rem;
         }
     &::-webkit-scrollbar-thumb{
             background-color:  #BA55D3;
@@ -20,7 +20,9 @@ html{
         }
 }
 body{
-    font-family: 'lato', sans-serif;
+    background-color: #E5E5E5;
+    font-family: 'Rubik', sans-serif;
+
     
 }
 a{
