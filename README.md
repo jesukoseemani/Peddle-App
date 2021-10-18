@@ -96,7 +96,7 @@ One thing to install globally is Node and Npm dependencies to be able to run the
 
 under the reviews given by the end users. the overflow is good but can be improved by using a box model to move left and right.
 
-Here is an example: ![imagedesign](https://ibb.co/j8SSKC1)
+Here is an example: ![imagedesign](https://user-images.githubusercontent.com/60023635/137703852-ae1fb9bd-cc0d-4100-b6f2-90fdacf660b2.jpeg)
 
 
 
