@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { fade, photo1Anim } from '../styles/Animation';
 import { FlexContent } from '../styles/ReuseableStyles';
 import Nav from '../components/Nav';
-// import { ReactComponent as Developer } from '../images/developer.svg';
 import Developer from '../images/webdeveloper.png';
 import {
 	faUser,
@@ -11,13 +12,20 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import StatsBox from '../components/StatsBox';
 import { ButtonActive } from '../styles/ReuseableStyles';
+import {
+	firstBreakOutHomePage,
+	ThirdBreakOutHomePage,
+	FourthBreakOutHomePage,
+} from '../styles/MediaQueries';
+import HamburgerBar from '../components/HamburgerBar';
 
 function Hero() {
+	const [active, setActive] = useState(false);
 	return (
 		<StyledHero>
-			<Nav />
+			<Nav active={active} setActive={setActive} />
 			<GetStarted>
-				<GetStartedLeft>
+				<GetStartedLeft variants={photo1Anim}>
 					<GetStartedLeftHeading>
 						We Are Everything We Aspire To BE
 					</GetStartedLeftHeading>
@@ -28,7 +36,7 @@ function Hero() {
 					</GetStartedLeftParagraph>
 					<GetStartedLeftButton>Get Started</GetStartedLeftButton>
 				</GetStartedLeft>
-				<GetStartedRight>
+				<GetStartedRight variants={fade}>
 					<GetStartedRightImage src={Developer} alt='developer' />
 				</GetStartedRight>
 			</GetStarted>
@@ -42,6 +50,7 @@ function Hero() {
 				/>
 				<StatsBox number={'50+'} content={'Servers'} icon={faServer} />
 			</StatsBoxes>
+			<HamburgerBar active={active} setActive={setActive} />
 		</StyledHero>
 	);
 }
@@ -49,36 +58,48 @@ function Hero() {
 const StyledHero = styled.div`
 	background-color: #ffffff;
 	padding: 0rem 10rem;
+	position: relative;
+
+	${FourthBreakOutHomePage({
+		padding: '0rem 5rem',
+	})}
 `;
 
 const GetStarted = styled(FlexContent)`
 	margin-top: -1rem;
+	height: 70vh;
+
+	${ThirdBreakOutHomePage({
+		flexDirection: 'column-reverse',
+		marginTop: '13rem',
+	})}
 `;
 
-const GetStartedLeft = styled.div`
+const GetStartedLeft = styled(motion.div)`
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
 	width: 100%;
-	height: 28rem;
+
+	${ThirdBreakOutHomePage({
+		alignItems: 'center',
+	})}
 `;
 
-const GetStartedRight = styled.div`
+const GetStartedRight = styled(motion.div)`
 	flex: 1;
 	width: 100%;
+
+	${ThirdBreakOutHomePage({
+		marginBottom: '1rem',
+	})}
 `;
 
 const GetStartedRightImage = styled.img`
 	width: 100%;
 	object-fit: cover;
-
-	/* #webdev {
-		max-width: 83rem;
-		max-width: 100%;
-		object-fit: cover;
-	}  */
 `;
 const GetStartedLeftHeading = styled.h1`
 	font-family: Rubik;
@@ -88,6 +109,14 @@ const GetStartedLeftHeading = styled.h1`
 	color: #0b132a;
 	text-shadow: 0px 2px 4px #ba55d3;
 	max-width: 90%;
+
+	${firstBreakOutHomePage({
+		fontSize: '3.5rem',
+	})}
+
+	${ThirdBreakOutHomePage({
+		textAlign: 'center',
+	})}
 `;
 
 const GetStartedLeftParagraph = styled.p`
@@ -96,6 +125,15 @@ const GetStartedLeftParagraph = styled.p`
 	line-height: 3rem;
 	color: #4f5665;
 	max-width: 90%;
+	margin: 1.5rem 0rem;
+
+	${firstBreakOutHomePage({
+		fontSize: '1.2rem',
+	})}
+	${ThirdBreakOutHomePage({
+		textAlign: 'center',
+		fontSize: '1.5rem',
+	})}
 `;
 
 const GetStartedLeftButton = styled(ButtonActive)``;
@@ -112,6 +150,14 @@ const StatsBoxes = styled.div`
 	box-shadow: -8px 33px 186px -49px rgba(0, 0, 0, 0.22);
 	-webkit-box-shadow: -8px 33px 186px -49px rgba(0, 0, 0, 0.22);
 	-moz-box-shadow: -8px 33px 186px -49px rgba(0, 0, 0, 0.22);
+
+	${ThirdBreakOutHomePage({
+		width: '100%',
+	})}
+
+	${FourthBreakOutHomePage({
+		padding: '0rem',
+	})}
 `;
 
 export default Hero;

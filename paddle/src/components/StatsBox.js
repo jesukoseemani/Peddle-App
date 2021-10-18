@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	firstBreakOutHomePage,
+	ThirdBreakOutHomePage,
+	FourthBreakOutHomePage,
+} from '../styles/MediaQueries';
 
 function StatsBox({ number, icon, content }) {
 	return (
@@ -35,6 +40,10 @@ const StatBox = styled.div`
 	&:first-child {
 		border-left: 0rem;
 	}
+
+	${FourthBreakOutHomePage({
+		flexDirection: 'column',
+	})}
 `;
 
 const StatsBoxLeft = styled.div`
@@ -54,6 +63,14 @@ const StatsBoxRight = styled.div`
 	justify-content: space-between;
 	align-items: flex-start;
 	margin-left: 3rem;
+
+	${ThirdBreakOutHomePage({
+		marginLeft: '1rem',
+	})}
+	${FourthBreakOutHomePage({
+		alignItems: 'center',
+		marginTop: '2rem',
+	})}
 `;
 
 const StatsBoxRightNumber = styled.h1`
@@ -62,6 +79,10 @@ const StatsBoxRightNumber = styled.h1`
 	font-size: 2.3rem;
 	line-height: 3rem;
 	color: #0b132a;
+
+	${firstBreakOutHomePage({
+		fontSize: '1.8rem',
+	})}
 `;
 
 const StatsBoxRightContent = styled.h3`
@@ -70,6 +91,10 @@ const StatsBoxRightContent = styled.h3`
 	font-size: 1.8rem;
 	line-height: 3rem;
 	color: #4f5665;
+
+	${firstBreakOutHomePage({
+		fontSize: '1.4rem',
+	})}
 `;
 
 export default StatsBox;

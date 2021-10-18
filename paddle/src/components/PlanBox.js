@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ButtonActive, ButtonNotActive } from '../styles/ReuseableStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { ThirdBreakOutHomePage } from '../styles/MediaQueries';
 
 function PlanBox({ box }) {
 	return (
@@ -54,6 +55,10 @@ const StyledPlanBox = styled.div`
 	margin: 2rem 2rem;
 	padding: 2rem;
 	background-color: #ffffff;
+
+	${ThirdBreakOutHomePage({
+		margin: '2rem 0rem',
+	})}
 `;
 
 const PlanBoxImageContainer = styled.div`
@@ -65,6 +70,11 @@ const PlanBoxImage = styled.img`
 	width: 21rem;
 	height: 21rem;
 	object-fit: cover;
+
+	${ThirdBreakOutHomePage({
+		width: '30rem',
+		height: '21rem',
+	})}
 `;
 
 const PlanBoxTitle = styled.h3`
@@ -75,12 +85,19 @@ const PlanBoxTitle = styled.h3`
 	text-align: center;
 	color: #0b132a;
 	margin-bottom: 1rem;
+	${ThirdBreakOutHomePage({
+		fontSize: '2.3rem',
+		marginBottom: '3rem',
+	})}
 `;
 const PlanBoxList = styled.ul`
 	height: 40%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	${ThirdBreakOutHomePage({
+		margin: '4rem 0rem',
+	})}
 `;
 const PlanBoxListItems = styled.li`
 	font-family: Rubik;
@@ -88,6 +105,10 @@ const PlanBoxListItems = styled.li`
 	font-size: 1.4rem;
 	line-height: 3rem;
 	color: #4f5665;
+	${ThirdBreakOutHomePage({
+		fontSize: '2rem',
+		marginBottom: '2rem',
+	})}
 `;
 const PlanBoxAmount = styled.h3`
 	font-family: Rubik;
@@ -97,6 +118,10 @@ const PlanBoxAmount = styled.h3`
 	text-align: center;
 	color: #0b132a;
 	margin-bottom: 1rem;
+	${ThirdBreakOutHomePage({
+		fontSize: '2.8rem',
+		margin: '3rem 0rem',
+	})}
 
 	span {
 		margin-left: 1rem;

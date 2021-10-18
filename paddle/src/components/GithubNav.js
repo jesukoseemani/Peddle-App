@@ -8,6 +8,7 @@ import {
 	faSearch,
 	faTimes,
 } from '@fortawesome/free-solid-svg-icons';
+import { firstBreakOutGithub } from '../styles/MediaQueries';
 
 function GithubNav() {
 	return (
@@ -73,6 +74,8 @@ const StyledGithubNavIcon = styled.div`
 		font-size: 3rem;
 		color: black;
 		cursor: pointer;
+
+		${firstBreakOutGithub({ display: 'none' })}
 	}
 
 	.icon-times {

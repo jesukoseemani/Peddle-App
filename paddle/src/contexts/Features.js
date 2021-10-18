@@ -2,6 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { FlexContent } from '../styles/ReuseableStyles';
 import piano from '../images/piano.png';
+import {
+	firstBreakOutHomePage,
+	ThirdBreakOutHomePage,
+	FourthBreakOutHomePage,
+} from '../styles/MediaQueries';
 function Features() {
 	return (
 		<StyledFeatures>
@@ -53,9 +58,26 @@ function Features() {
 
 const StyledFeatures = styled(FlexContent)`
 	padding: 10rem 10rem;
+	${FourthBreakOutHomePage({
+		padding: '0rem 5rem',
+	})}
+
+	${ThirdBreakOutHomePage({
+		flexDirection: 'column',
+	})}
 `;
-const StyledFeaturesLeft = styled.div``;
-const StyledFeaturesRight = styled.div``;
+const StyledFeaturesLeft = styled.div`
+	${ThirdBreakOutHomePage({
+		marginBottom: '2rem',
+	})}
+`;
+const StyledFeaturesRight = styled.div`
+	${ThirdBreakOutHomePage({
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+	})}
+`;
 const StyledFeaturesLeftImage = styled.img`
 	width: 95%;
 	object-fit: cover;
@@ -67,6 +89,15 @@ const StyledFeaturesRightHeading = styled.h1`
 	line-height: 5rem;
 	color: #0b132a;
 	margin-bottom: 1rem;
+
+	${firstBreakOutHomePage({
+		fontSize: '2.5rem',
+	})}
+
+	${ThirdBreakOutHomePage({
+		textAlign: 'center',
+		fontSize: '3.5rem',
+	})}
 `;
 const StyledFeaturesRightParagraph = styled.p`
 	font-family: Rubik;
@@ -74,6 +105,14 @@ const StyledFeaturesRightParagraph = styled.p`
 	font-size: 1.6rem;
 	line-height: 3rem;
 	color: #4f5665;
+	${firstBreakOutHomePage({
+		fontSize: '1.2rem',
+	})}
+
+	${ThirdBreakOutHomePage({
+		textAlign: 'center',
+		fontSize: '1.6rem',
+	})}
 `;
 const StyledFeaturesRightLists = styled.ul``;
 const StyledFeaturesRightListsItem = styled.li`

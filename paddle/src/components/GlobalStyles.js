@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { SecondBreakOutGithub } from '../styles/MediaQueries';
 
 const GlobalStyles = createGlobalStyle`
 *{
@@ -18,11 +19,14 @@ html{
     &::-webkit-scrollbar-track {
     background: white;
         }
+
+        ${SecondBreakOutGithub({
+					fontSize: '8px',
+				})}
 }
 body{
     background-color: #E5E5E5;
     font-family: 'Rubik', sans-serif;
-
     
 }
 a{

@@ -7,6 +7,11 @@ import man2 from '../images/man2.png';
 import woman1 from '../images/woman1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import {
+	firstBreakOutHomePage,
+	ThirdBreakOutHomePage,
+	FourthBreakOutHomePage,
+} from '../styles/MediaQueries';
 
 function Reviews() {
 	const [active, setActive] = useState(false);
@@ -147,14 +152,39 @@ const StyledReviews = styled.div`
 	background-color: #ffffff;
 	padding: 0rem 10rem;
 	padding-bottom: 10rem;
+
+	${FourthBreakOutHomePage({
+		padding: '0rem .5rem',
+		paddingBottom: '20rem',
+	})}
 `;
 
 const StyledReviewsHeading = styled(StyledHeading)`
 	width: 40%;
+
+	${firstBreakOutHomePage({
+		width: '60%',
+	})}
+
+	${ThirdBreakOutHomePage({
+		width: '70%',
+	})}
+
+	${FourthBreakOutHomePage({
+		width: '100%',
+	})}
 `;
 
 const StyledReviewsContent = styled(StyledContent)`
 	width: 45%;
+
+	${firstBreakOutHomePage({
+		width: '60%',
+	})}
+
+	${ThirdBreakOutHomePage({
+		width: '70%',
+	})}
 `;
 
 const StyledReviewsBox = styled.div`

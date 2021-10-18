@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { firstBreakOutHomePage, ThirdBreakOutHomePage } from './MediaQueries';
 
-export const FlexContent = styled.div`
+export const FlexContent = styled(motion.div)`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,6 +44,15 @@ export const StyledHeading = styled.h1`
 	line-height: 5rem;
 	color: #0b132a;
 	margin-bottom: 1rem;
+
+	${firstBreakOutHomePage({
+		fontSize: '2.5rem',
+	})}
+
+	${ThirdBreakOutHomePage({
+		fontSize: '3.5rem',
+		textAlign: 'center',
+	})}
 `;
 export const StyledContent = styled.p`
 	font-family: Rubik;
@@ -50,6 +61,13 @@ export const StyledContent = styled.p`
 	line-height: 3rem;
 	color: #4f5665;
 	margin-bottom: 1rem;
+	${firstBreakOutHomePage({
+		fontSize: '1.3rem',
+	})}
+	${ThirdBreakOutHomePage({
+		fontSize: '1.6rem',
+		textAlign: 'center',
+	})}
 `;
 
 export const LogoParagraph = styled.p`

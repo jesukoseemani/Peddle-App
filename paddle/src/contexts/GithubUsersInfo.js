@@ -1,67 +1,48 @@
-import React from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import GithubUserInfo from '../components/GithubUserInfo';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faChevronCircleLeft,
-	faChevronCircleRight,
-} from '@fortawesome/free-solid-svg-icons';
+import useSearchScroll from '../components/useSearchScroll';
 
 function GithubUsersInfo() {
-	const data = [
-		{
-			image: 'https://picsum.photos/600',
-			name: 'koseemani ayo',
-			description:
-				'lorem lorem lorem lorem lorem lorem lorem lorem lorme lore loeje lenmem tafvsbt',
-			starnumber: '118k',
-			issue: '83k',
-			time: '3 days ago',
+	const [pageNumber, setPageNumber] = useState(1);
+	const { users, hasMore, loading, error } = useSearchScroll(pageNumber);
+
+	const observer = useRef();
+	const lastUserElementRef = useCallback(
+		(node) => {
+			if (loading) return;
+			if (observer.current) observer.current.disconnect();
+			observer.current = new IntersectionObserver((entries) => {
+				if (entries[0].isIntersecting && hasMore) {
+					setPageNumber((prevPageNumber) => prevPageNumber + 1);
+				}
+			});
+			if (node) observer.current.observe(node);
 		},
-		{
-			image: 'https://picsum.photos/600',
-			name: 'koseemani ayo',
-			description:
-				'lorem lorem lorem lorem lorem lorem lorem lorem lorme lore loeje lenmem tafvsbt',
-			starnumber: '118k',
-			issue: '83k',
-			time: '3 days ago',
-		},
-		{
-			image: 'https://picsum.photos/600',
-			name: 'koseemani ayo',
-			description:
-				'lorem lorem lorem lorem lorem lorem lorem lorem lorme lore loeje lenmem tafvsbt',
-			starnumber: '118k',
-			issue: '83k',
-			time: '3 days ago',
-		},
-	];
+		[loading, hasMore]
+	);
+
 	return (
 		<>
 			<StyledGithubUsersWrapper>
-				{data.map((dataItem, i) => (
-					<GithubUserInfo item={dataItem} key={i} />
-				))}
+				{users.map((dataItem, index) => {
+					if (users.length === index + 1) {
+						return (
+							<GithubUserInfo
+								parentref={lastUserElementRef}
+								item={dataItem}
+								key={index}
+							/>
+						);
+					} else {
+						return <GithubUserInfo item={dataItem} key={index} />;
+					}
+				})}
 			</StyledGithubUsersWrapper>
-			<StyledGithubUsersPreviousNext>
-				<StyledGithubUsersPrevious>
-					<span>PREV</span>
-					<FontAwesomeIcon
-						className='icon icon-arrow-left'
-						icon={faChevronCircleLeft}
-						size='2x'
-					/>
-				</StyledGithubUsersPrevious>
-				<StyledGithubUsersNext>
-					<FontAwesomeIcon
-						className='icon icon-arrow-right'
-						icon={faChevronCircleRight}
-						size='2x'
-					/>
-					<span>NEXT</span>
-				</StyledGithubUsersNext>
-			</StyledGithubUsersPreviousNext>
+			<div style={{ color: 'green', fontSize: '1.5rem' }}>
+				{loading && 'Loading...'}
+			</div>
+			<div style={{ color: 'red', fontSize: '1.5rem' }}>{error && 'Error'}</div>
 		</>
 	);
 }
@@ -72,38 +53,6 @@ const StyledGithubUsersWrapper = styled.div`
 	justify-content: space-between;
 	padding: 2rem 0rem;
 	width: 100%;
-`;
-
-const StyledGithubUsersPreviousNext = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 2rem;
-	cursor: pointer;
-`;
-
-const StyledGithubUsersPrevious = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 2rem;
-
-	span {
-		margin-right: 2rem;
-		color: red;
-	}
-`;
-
-const StyledGithubUsersNext = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 2rem;
-
-	span {
-		margin-left: 2rem;
-		color: black;
-	}
 `;
 
 export default GithubUsersInfo;

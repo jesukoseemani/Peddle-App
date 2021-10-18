@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { firstBreakOutHomePage } from '../styles/MediaQueries';
 
-function Nav() {
+function Nav({ active, setActive }) {
 	return (
 		<StyledNav>
 			<NavLogo>
@@ -19,6 +22,16 @@ function Nav() {
 				<SignButton active='false'>SignIn</SignButton>
 				<SignButton active='true'>SignOut</SignButton>
 			</AuthenticationButton>
+
+			<HamburgerButton>
+				<FontAwesomeIcon
+					onClick={() => setActive(true)}
+					className='icon icon-bar'
+					icon={faBars}
+					size='3x'
+					style={{ display: active ? 'none' : '' }}
+				/>
+			</HamburgerButton>
 		</StyledNav>
 	);
 }
@@ -45,6 +58,9 @@ const NavItems = styled.ul`
 	justify-content: space-between;
 	align-items: flex-start;
 	height: 3rem;
+	${firstBreakOutHomePage({
+		display: 'none',
+	})}
 `;
 const NavItemlist = styled.li`
 	margin: 0rem 2rem;
@@ -61,6 +77,9 @@ const AuthenticationButton = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
+	${firstBreakOutHomePage({
+		display: 'none',
+	})}
 `;
 
 const SignButton = styled.a`
@@ -75,5 +94,21 @@ const SignButton = styled.a`
 	border-color: ${(props) => (props.active === 'true' ? '#BA55D3' : '')};
 	border-style: ${(props) => (props.active === 'true' ? 'solid' : '')};
 	border-radius: ${(props) => (props.active === 'true' ? '.5rem' : '')};
+`;
+
+const HamburgerButton = styled.div`
+	transition: all 1s ease;
+	display: none;
+	.icon-bar {
+		color: black;
+		display: none;
+		${firstBreakOutHomePage({
+			display: 'flex',
+		})}
+	}
+
+	${firstBreakOutHomePage({
+		display: 'flex',
+	})}
 `;
 export default Nav;
