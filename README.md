@@ -74,7 +74,7 @@ One thing to install globally is Node and Npm dependencies to be able to run the
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/jesukoseemani/Peddle-App.git
+   git clone https://github.com/jesukoseemani/paddle-frontend-assessment.git
    ```
 2. Install NPM packages
    ```sh
@@ -109,7 +109,7 @@ Here is an example:[![Product Name Screen Shot][product-screenshot]](https://exa
 
 Your Name - [@olowokosh](https://twitter.com/olowokosh) - olowosusiayo@gmail.com.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/jesukoseemani/paddle-frontend-assessment](https://github.com/jesukoseemani/paddle-frontend-assessment)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
