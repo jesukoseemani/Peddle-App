@@ -18,11 +18,11 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+   
   </ol>
 </details>
 
@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Project-image][product-screenshot]](https://example.com)
 
 This Project is an assessment test for FrontEnd developer position at Peddle Technologies. It is a two pages web app using React on the FrontEnd and Github API on the back end.
 
@@ -96,7 +96,7 @@ One thing to install globally is Node and Npm dependencies to be able to run the
 
 under the reviews given by the end users. the overflow is good but can be improved by using a box model to move left and right.
 
-Here is an example:[![mock-up][mock-up-suggestion]](https://ibb.co/j8SSKC1)
+Here is an example:[![imagedesign][mock-up-suggestion-url]](https://ibb.co/j8SSKC1)
 
 
 
