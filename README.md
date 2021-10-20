@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Project-image][product-screenshot]](https://example.com)
+[![Project-image][project-screenshot]](https://user-images.githubusercontent.com/60023635/137707470-704e3e33-772c-4fcf-8d62-0631add6b7d5.png)
 
 This Project is an assessment test for FrontEnd developer position at Peddle Technologies. It is a two pages web app using React on the FrontEnd and Github API on the back end.
 
