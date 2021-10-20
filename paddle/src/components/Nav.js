@@ -5,35 +5,35 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { firstBreakOutHomePage } from '../styles/MediaQueries';
 
 function Nav({ active, setActive }) {
-	return (
-		<StyledNav>
-			<NavLogo>
-				<LogoParagraph>PEDDLE</LogoParagraph>
-			</NavLogo>
+  return (
+    <StyledNav>
+      <NavLogo>
+        <LogoParagraph>PEDDLE</LogoParagraph>
+      </NavLogo>
 
-			<NavItems>
-				<NavItemlist>About</NavItemlist>
-				<NavItemlist>FAQS</NavItemlist>
-				<NavItemlist>Pricing</NavItemlist>
-				<NavItemlist>Testimonials</NavItemlist>
-			</NavItems>
+      <NavItems>
+        <NavItemlist>About</NavItemlist>
+        <NavItemlist>FAQS</NavItemlist>
+        <NavItemlist>Pricing</NavItemlist>
+        <NavItemlist>Testimonials</NavItemlist>
+      </NavItems>
 
-			<AuthenticationButton>
-				<SignButton active='false'>SignIn</SignButton>
-				<SignButton active='true'>SignOut</SignButton>
-			</AuthenticationButton>
+      <AuthenticationButton>
+        <SignButton active="false">SignIn</SignButton>
+        <SignButton active="true">SignOut</SignButton>
+      </AuthenticationButton>
 
-			<HamburgerButton>
-				<FontAwesomeIcon
-					onClick={() => setActive(true)}
-					className='icon icon-bar'
-					icon={faBars}
-					size='3x'
-					style={{ display: active ? 'none' : '' }}
-				/>
-			</HamburgerButton>
-		</StyledNav>
-	);
+      <HamburgerButton>
+        <FontAwesomeIcon
+          onClick={() => setActive(true)}
+          className="icon icon-bar"
+          icon={faBars}
+          size="3x"
+          style={{ display: active ? 'none' : '' }}
+        />
+      </HamburgerButton>
+    </StyledNav>
+  );
 }
 
 const StyledNav = styled.div`
@@ -59,8 +59,8 @@ const NavItems = styled.ul`
 	align-items: flex-start;
 	height: 3rem;
 	${firstBreakOutHomePage({
-		display: 'none',
-	})}
+    display: 'none',
+  })}
 `;
 const NavItemlist = styled.li`
 	margin: 0rem 2rem;
@@ -78,8 +78,8 @@ const AuthenticationButton = styled.div`
 	align-items: center;
 	cursor: pointer;
 	${firstBreakOutHomePage({
-		display: 'none',
-	})}
+    display: 'none',
+  })}
 `;
 
 const SignButton = styled.a`
@@ -103,12 +103,12 @@ const HamburgerButton = styled.div`
 		color: black;
 		display: none;
 		${firstBreakOutHomePage({
-			display: 'flex',
-		})}
+    display: 'flex',
+  })}
 	}
 
 	${firstBreakOutHomePage({
-		display: 'flex',
-	})}
+    display: 'flex',
+  })}
 `;
 export default Nav;

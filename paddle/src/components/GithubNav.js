@@ -2,50 +2,50 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faArrowAltCircleLeft,
-	faArrowAltCircleRight,
-	faHome,
-	faSearch,
-	faTimes,
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight,
+  faHome,
+  faSearch,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { firstBreakOutGithub } from '../styles/MediaQueries';
 
 function GithubNav() {
-	return (
-		<StyledGithubNav>
-			<StyledGithubNavHeading>Trending Repos</StyledGithubNavHeading>
-			<StyledGithubNavWrapper>
-				<StyledGithubNavIcon>
-					<FontAwesomeIcon
-						className='icon icon-arrow-left'
-						icon={faArrowAltCircleLeft}
-						size='2x'
-					/>
-				</StyledGithubNavIcon>
-				<StyledGithubNavIcon>
-					<FontAwesomeIcon
-						className='icon icon-arrow-right'
-						icon={faArrowAltCircleRight}
-						size='2x'
-					/>
-				</StyledGithubNavIcon>
-				<StyledGithubNavIcon>
-					<FontAwesomeIcon className='icon icon-home' icon={faHome} size='2x' />
-				</StyledGithubNavIcon>
-				<StyledGithubNavIcon>
-					<FontAwesomeIcon
-						className='icon icon-times'
-						icon={faTimes}
-						size='2x'
-					/>
-				</StyledGithubNavIcon>
-				<StyledGithubNavInput type='text' placeholder='Search Users' />
-				<StyledGithubNavIcon>
-					<FontAwesomeIcon className='search' icon={faSearch} size='2x' />
-				</StyledGithubNavIcon>
-			</StyledGithubNavWrapper>
-		</StyledGithubNav>
-	);
+  return (
+    <StyledGithubNav>
+      <StyledGithubNavHeading>Trending Repos</StyledGithubNavHeading>
+      <StyledGithubNavWrapper>
+        <StyledGithubNavIcon>
+          <FontAwesomeIcon
+            className="icon icon-arrow-left"
+            icon={faArrowAltCircleLeft}
+            size="2x"
+          />
+        </StyledGithubNavIcon>
+        <StyledGithubNavIcon>
+          <FontAwesomeIcon
+            className="icon icon-arrow-right"
+            icon={faArrowAltCircleRight}
+            size="2x"
+          />
+        </StyledGithubNavIcon>
+        <StyledGithubNavIcon>
+          <FontAwesomeIcon className="icon icon-home" icon={faHome} size="2x" />
+        </StyledGithubNavIcon>
+        <StyledGithubNavIcon>
+          <FontAwesomeIcon
+            className="icon icon-times"
+            icon={faTimes}
+            size="2x"
+          />
+        </StyledGithubNavIcon>
+        <StyledGithubNavInput type="text" placeholder="Search Users" />
+        <StyledGithubNavIcon>
+          <FontAwesomeIcon className="search" icon={faSearch} size="2x" />
+        </StyledGithubNavIcon>
+      </StyledGithubNavWrapper>
+    </StyledGithubNav>
+  );
 }
 
 const StyledGithubNav = styled.div`

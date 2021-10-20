@@ -2,32 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	firstBreakOutHomePage,
-	ThirdBreakOutHomePage,
-	FourthBreakOutHomePage,
+  firstBreakOutHomePage,
+  ThirdBreakOutHomePage,
+  FourthBreakOutHomePage,
 } from '../styles/MediaQueries';
 
 function StatsBox({ number, icon, content }) {
-	return (
-		<StatBox>
-			<StatsBoxLeft>
-				<FontAwesomeIcon
-					style={{
-						color: '#BA55D3',
-						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-					}}
-					icon={icon}
-					size='2x'
-				/>
-			</StatsBoxLeft>
-			<StatsBoxRight>
-				<StatsBoxRightNumber>{number}</StatsBoxRightNumber>
-				<StatsBoxRightContent>{content}</StatsBoxRightContent>
-			</StatsBoxRight>
-		</StatBox>
-	);
+  return (
+    <StatBox>
+      <StatsBoxLeft>
+        <FontAwesomeIcon
+          style={{
+					  color: '#BA55D3',
+					  display: 'flex',
+					  justifyContent: 'center',
+					  alignItems: 'center',
+          }}
+          icon={icon}
+          size="2x"
+        />
+      </StatsBoxLeft>
+      <StatsBoxRight>
+        <StatsBoxRightNumber>{number}</StatsBoxRightNumber>
+        <StatsBoxRightContent>{content}</StatsBoxRightContent>
+      </StatsBoxRight>
+    </StatBox>
+  );
 }
 
 const StatBox = styled.div`
@@ -42,8 +42,8 @@ const StatBox = styled.div`
 	}
 
 	${FourthBreakOutHomePage({
-		flexDirection: 'column',
-	})}
+    flexDirection: 'column',
+  })}
 `;
 
 const StatsBoxLeft = styled.div`
@@ -65,12 +65,12 @@ const StatsBoxRight = styled.div`
 	margin-left: 3rem;
 
 	${ThirdBreakOutHomePage({
-		marginLeft: '1rem',
-	})}
+    marginLeft: '1rem',
+  })}
 	${FourthBreakOutHomePage({
-		alignItems: 'center',
-		marginTop: '2rem',
-	})}
+    alignItems: 'center',
+    marginTop: '2rem',
+  })}
 `;
 
 const StatsBoxRightNumber = styled.h1`
@@ -81,8 +81,8 @@ const StatsBoxRightNumber = styled.h1`
 	color: #0b132a;
 
 	${firstBreakOutHomePage({
-		fontSize: '1.8rem',
-	})}
+    fontSize: '1.8rem',
+  })}
 `;
 
 const StatsBoxRightContent = styled.h3`
@@ -93,8 +93,8 @@ const StatsBoxRightContent = styled.h3`
 	color: #4f5665;
 
 	${firstBreakOutHomePage({
-		fontSize: '1.4rem',
-	})}
+    fontSize: '1.4rem',
+  })}
 `;
 
 export default StatsBox;

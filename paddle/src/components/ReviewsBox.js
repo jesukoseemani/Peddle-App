@@ -4,46 +4,47 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 function ReviewsBox({ box }) {
-	return (
-		<StyledReviewsBox
-			style={{
-				borderColor: box.active === true ? '#BA55D3' : '',
-				borderWidth: box.active === true ? '3px' : '',
-			}}>
-			<StyledReviewsBoxTop>
-				<StyledReviewsBoxTopLeft>
-					<StyledReviewsBoxTopLeftImage src={box.image} alt='user-photo' />
+  return (
+    <StyledReviewsBox
+      style={{
+			  borderColor: box.active === true ? '#BA55D3' : '',
+			  borderWidth: box.active === true ? '3px' : '',
+      }}
+    >
+      <StyledReviewsBoxTop>
+        <StyledReviewsBoxTopLeft>
+          <StyledReviewsBoxTopLeftImage src={box.image} alt="user-photo" />
 
-					<StyledReviewsBoxTopLeftContent>
-						<StyledReviewsBoxTopLeftContentName>
-							{box.name}
-						</StyledReviewsBoxTopLeftContentName>
+          <StyledReviewsBoxTopLeftContent>
+            <StyledReviewsBoxTopLeftContentName>
+              {box.name}
+            </StyledReviewsBoxTopLeftContentName>
 
-						<StyledReviewsBoxTopLeftContentLocation>
-							{box.location}
-						</StyledReviewsBoxTopLeftContentLocation>
-					</StyledReviewsBoxTopLeftContent>
-				</StyledReviewsBoxTopLeft>
+            <StyledReviewsBoxTopLeftContentLocation>
+              {box.location}
+            </StyledReviewsBoxTopLeftContentLocation>
+          </StyledReviewsBoxTopLeftContent>
+        </StyledReviewsBoxTopLeft>
 
-				<StyledReviewsBoxTopRight>
-					<StyledReviewsBoxTopRightRating>
-						{box.rating}
-					</StyledReviewsBoxTopRightRating>
-					<FontAwesomeIcon
-						style={{ marginLeft: '1rem', color: '#FEA250' }}
-						icon={faStar}
-						size='2x'
-					/>
-				</StyledReviewsBoxTopRight>
-			</StyledReviewsBoxTop>
+        <StyledReviewsBoxTopRight>
+          <StyledReviewsBoxTopRightRating>
+            {box.rating}
+          </StyledReviewsBoxTopRightRating>
+          <FontAwesomeIcon
+            style={{ marginLeft: '1rem', color: '#FEA250' }}
+            icon={faStar}
+            size="2x"
+          />
+        </StyledReviewsBoxTopRight>
+      </StyledReviewsBoxTop>
 
-			<StyledReviewsBoxBottom>
-				<StyledReviewsBoxBottomComment>
-					{box.comment}
-				</StyledReviewsBoxBottomComment>
-			</StyledReviewsBoxBottom>
-		</StyledReviewsBox>
-	);
+      <StyledReviewsBoxBottom>
+        <StyledReviewsBoxBottomComment>
+          {box.comment}
+        </StyledReviewsBoxBottomComment>
+      </StyledReviewsBoxBottom>
+    </StyledReviewsBox>
+  );
 }
 
 const StyledReviewsBox = styled.div`

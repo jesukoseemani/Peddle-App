@@ -1,145 +1,143 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import ReviewsBox from '../components/ReviewsBox';
 import { StyledContent, StyledHeading } from '../styles/ReuseableStyles';
 import man1 from '../images/man1.png';
 import man2 from '../images/man2.png';
 import woman1 from '../images/woman1.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import {
-	firstBreakOutHomePage,
-	ThirdBreakOutHomePage,
-	FourthBreakOutHomePage,
+  firstBreakOutHomePage,
+  ThirdBreakOutHomePage,
+  FourthBreakOutHomePage,
 } from '../styles/MediaQueries';
 
 function Reviews() {
-	const [active, setActive] = useState(false);
-	const ref = useRef(null);
+  const [active, setActive] = useState(false);
+  const ref = useRef(null);
 
-	const handleClick = (direction) => {
-		let scrollRef = ref.current;
+  const handleClick = (direction) => {
+    let scrollRef = ref.current;
 
-		if (direction === 'left') {
-			if (scrollRef) {
-				scrollRef.scrollLeft -= 200;
-				setActive(true);
-			} else {
-				scrollRef = null;
-				setActive(false);
-			}
-		} else {
-			if (scrollRef) {
-				scrollRef.scrollLeft += 200;
-				setActive(true);
-			} else {
-				scrollRef = null;
-				setActive(false);
-			}
-		}
-	};
+    if (direction === 'left') {
+      if (scrollRef) {
+        scrollRef.scrollLeft -= 200;
+        setActive(true);
+      } else {
+        scrollRef = null;
+        setActive(false);
+      }
+    } else if (scrollRef) {
+      scrollRef.scrollLeft += 200;
+      setActive(true);
+    } else {
+      scrollRef = null;
+      setActive(false);
+    }
+  };
 
-	const data = [
-		{
-			image: `${man2}`,
-			name: 'Viezh Robert',
-			location: 'Warsaw, Poland',
-			comment:
+  const data = [
+    {
+      image: `${man2}`,
+      name: 'Viezh Robert',
+      location: 'Warsaw, Poland',
+      comment:
 				'“Mauris sem neque, ultrices nec sapien id, consequat laoreet dolor. Ut rhoncus sollicitudin metus, ac lobortis felis dignissim et. Fusce arcu ex”',
-			rating: 4.5,
-			active: true,
-			id: 1,
-		},
-		{
-			image: `${woman1}`,
-			name: 'Yessica Christy',
-			location: 'Shanxi, China',
-			comment:
+      rating: 4.5,
+      active: true,
+      id: 1,
+    },
+    {
+      image: `${woman1}`,
+      name: 'Yessica Christy',
+      location: 'Shanxi, China',
+      comment:
 				'“Mauris sem neque, ultrices nec sapien id, consequat laoreet dolor. Ut rhoncus sollicitudin metus, ac lobortis felis dignissim et. Fusce arcu ex”',
-			rating: 4.5,
-			active: false,
-			id: 2,
-		},
-		{
-			image: `${man1}`,
-			name: 'Kim Young Jou',
-			location: 'Seoul, South Korea',
-			comment:
+      rating: 4.5,
+      active: false,
+      id: 2,
+    },
+    {
+      image: `${man1}`,
+      name: 'Kim Young Jou',
+      location: 'Seoul, South Korea',
+      comment:
 				'“Mauris sem neque, ultrices nec sapien id, consequat laoreet dolor. Ut rhoncus sollicitudin metus, ac lobortis felis dignissim et. Fusce arcu ex”',
-			rating: 4.5,
-			active: false,
-			id: 3,
-		},
-		{
-			image: `${woman1}`,
-			name: 'Kanyinsola Glue',
-			location: 'Ibadan, Nigeria',
-			comment:
+      rating: 4.5,
+      active: false,
+      id: 3,
+    },
+    {
+      image: `${woman1}`,
+      name: 'Kanyinsola Glue',
+      location: 'Ibadan, Nigeria',
+      comment:
 				'“Mauris sem neque, ultrices nec sapien id, consequat laoreet dolor. Ut rhoncus sollicitudin metus, ac lobortis felis dignissim et. Fusce arcu ex”',
-			rating: 4.5,
-			active: false,
-			id: 4,
-		},
-		{
-			image: `${man1}`,
-			name: 'Brick Cage',
-			location: 'Shanxi, China',
-			comment:
+      rating: 4.5,
+      active: false,
+      id: 4,
+    },
+    {
+      image: `${man1}`,
+      name: 'Brick Cage',
+      location: 'Shanxi, China',
+      comment:
 				'“Mauris sem neque, ultrices nec sapien id, consequat laoreet dolor. Ut rhoncus sollicitudin metus, ac lobortis felis dignissim et. Fusce arcu ex”',
-			rating: 4.5,
-			active: false,
-			id: 5,
-		},
-		{
-			image: `${man2}`,
-			name: 'Olowo kosh',
-			location: 'Lagos, Nigeria',
-			comment:
+      rating: 4.5,
+      active: false,
+      id: 5,
+    },
+    {
+      image: `${man2}`,
+      name: 'Olowo kosh',
+      location: 'Lagos, Nigeria',
+      comment:
 				'“Mauris sem neque, ultrices nec sapien id, consequat laoreet dolor. Ut rhoncus sollicitudin metus, ac lobortis felis dignissim et. Fusce arcu ex”',
-			rating: 4.5,
-			active: false,
-			id: 6,
-		},
-	];
+      rating: 4.5,
+      active: false,
+      id: 6,
+    },
+  ];
 
-	return (
-		<StyledReviews>
-			<StyledReviewsHeading>
-				Trusted by Thousands of Happy Customer
-			</StyledReviewsHeading>
-			<StyledReviewsContent>
-				Nam laoreet cursus diam, sed tristique arcu semper non. Suspendisse et
-				suscipit est, nec laoreet mi. Nunc pellentesque imperdiet ultricies.
-			</StyledReviewsContent>
-			<StyledReviewsBox ref={ref}>
-				{data.map((item) => (
-					<ReviewsBox box={item} key={item.id} />
-				))}
-			</StyledReviewsBox>
+  return (
+    <StyledReviews>
+      <StyledReviewsHeading>
+        Trusted by Thousands of Happy Customer
+      </StyledReviewsHeading>
+      <StyledReviewsContent>
+        Nam laoreet cursus diam, sed tristique arcu semper non. Suspendisse et
+        suscipit est, nec laoreet mi. Nunc pellentesque imperdiet ultricies.
+      </StyledReviewsContent>
+      <StyledReviewsBox ref={ref}>
+        {data.map((item) => <ReviewsBox box={item} key={item.id} />)}
+      </StyledReviewsBox>
 
-			<Switch>
-				<div
-					className='wrapper'
-					style={{
-						backgroundColor: active ? '#ba55d3' : '',
-						color: active ? '#ffffff' : '',
-					}}
-					onClick={() => handleClick('left')}>
-					<FontAwesomeIcon className='arrow' icon={faArrowLeft} size='2x' />
-				</div>
+      <Switch>
+        <div
+          className="wrapper"
+          style={{
+					  backgroundColor: active ? '#ba55d3' : '',
+					  color: active ? '#ffffff' : '',
+          }}
+          onClick={() => handleClick('left')}
+        >
+          <FontAwesomeIcon className="arrow" icon={faArrowLeft} size="2x" />
+        </div>
 
-				<div
-					className='wrapper'
-					style={{
-						backgroundColor: active ? '#ba55d3' : '',
-						color: active ? '#ffffff' : '',
-					}}
-					onClick={() => handleClick('right')}>
-					<FontAwesomeIcon className='arrow' icon={faArrowRight} size='2x' />
-				</div>
-			</Switch>
-		</StyledReviews>
-	);
+        <div
+          className="wrapper"
+          style={{
+					  backgroundColor: active ? '#ba55d3' : '',
+					  color: active ? '#ffffff' : '',
+          }}
+          onClick={() => handleClick('right')}
+        >
+          <FontAwesomeIcon className="arrow" icon={faArrowRight} size="2x" />
+        </div>
+      </Switch>
+    </StyledReviews>
+  );
 }
 
 const StyledReviews = styled.div`
@@ -154,37 +152,37 @@ const StyledReviews = styled.div`
 	padding-bottom: 10rem;
 
 	${FourthBreakOutHomePage({
-		padding: '0rem .5rem',
-		paddingBottom: '20rem',
-	})}
+    padding: '0rem .5rem',
+    paddingBottom: '20rem',
+  })}
 `;
 
 const StyledReviewsHeading = styled(StyledHeading)`
 	width: 40%;
 
 	${firstBreakOutHomePage({
-		width: '60%',
-	})}
+    width: '60%',
+})}
 
 	${ThirdBreakOutHomePage({
-		width: '70%',
-	})}
+    width: '70%',
+  })}
 
 	${FourthBreakOutHomePage({
-		width: '100%',
-	})}
+    width: '100%',
+  })}
 `;
 
 const StyledReviewsContent = styled(StyledContent)`
 	width: 45%;
 
 	${firstBreakOutHomePage({
-		width: '60%',
-	})}
+    width: '60%',
+  })}
 
 	${ThirdBreakOutHomePage({
-		width: '70%',
-	})}
+    width: '70%',
+  })}
 `;
 
 const StyledReviewsBox = styled.div`

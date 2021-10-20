@@ -46,13 +46,13 @@ export const StyledHeading = styled.h1`
 	margin-bottom: 1rem;
 
 	${firstBreakOutHomePage({
-		fontSize: '2.5rem',
-	})}
+    fontSize: '2.5rem',
+  })}
 
 	${ThirdBreakOutHomePage({
-		fontSize: '3.5rem',
-		textAlign: 'center',
-	})}
+    fontSize: '3.5rem',
+    textAlign: 'center',
+  })}
 `;
 export const StyledContent = styled.p`
 	font-family: Rubik;
@@ -62,12 +62,12 @@ export const StyledContent = styled.p`
 	color: #4f5665;
 	margin-bottom: 1rem;
 	${firstBreakOutHomePage({
-		fontSize: '1.3rem',
-	})}
+    fontSize: '1.3rem',
+  })}
 	${ThirdBreakOutHomePage({
-		fontSize: '1.6rem',
-		textAlign: 'center',
-	})}
+    fontSize: '1.6rem',
+    textAlign: 'center',
+  })}
 `;
 
 export const LogoParagraph = styled.p`

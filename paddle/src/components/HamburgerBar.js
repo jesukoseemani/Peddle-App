@@ -5,36 +5,36 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { firstBreakOutHomePage } from '../styles/MediaQueries';
 
 function HamburgerBar({ active, setActive }) {
-	return (
-		<StyledHamburger style={{ right: active ? '0' : '-100%' }}>
-			<StyledNav>
-				<HamburgerButton>
-					<FontAwesomeIcon
-						onClick={() => setActive(false)}
-						className='icon icon-times'
-						icon={faTimes}
-						size='4x'
-					/>
-				</HamburgerButton>
+  return (
+    <StyledHamburger style={{ right: active ? '0' : '-100%' }}>
+      <StyledNav>
+        <HamburgerButton>
+          <FontAwesomeIcon
+            onClick={() => setActive(false)}
+            className="icon icon-times"
+            icon={faTimes}
+            size="4x"
+          />
+        </HamburgerButton>
 
-				<NavLogo>
-					<LogoParagraph>PEDDLE</LogoParagraph>
-				</NavLogo>
+        <NavLogo>
+          <LogoParagraph>PEDDLE</LogoParagraph>
+        </NavLogo>
 
-				<NavItems>
-					<NavItemlist>About</NavItemlist>
-					<NavItemlist>FAQS</NavItemlist>
-					<NavItemlist>Pricing</NavItemlist>
-					<NavItemlist>Testimonials</NavItemlist>
-				</NavItems>
+        <NavItems>
+          <NavItemlist>About</NavItemlist>
+          <NavItemlist>FAQS</NavItemlist>
+          <NavItemlist>Pricing</NavItemlist>
+          <NavItemlist>Testimonials</NavItemlist>
+        </NavItems>
 
-				<AuthenticationButton>
-					<SignButton active='false'>SignIn</SignButton>
-					<SignButton active='true'>SignOut</SignButton>
-				</AuthenticationButton>
-			</StyledNav>
-		</StyledHamburger>
-	);
+        <AuthenticationButton>
+          <SignButton active="false">SignIn</SignButton>
+          <SignButton active="true">SignOut</SignButton>
+        </AuthenticationButton>
+      </StyledNav>
+    </StyledHamburger>
+  );
 }
 
 const StyledHamburger = styled.div`
@@ -51,8 +51,8 @@ const StyledHamburger = styled.div`
 	/* display: none;
 
 	${firstBreakOutHomePage({
-		display: 'flex',
-	})} */
+    display: 'flex',
+  })} */
 `;
 const StyledNav = styled.div`
 	display: flex;

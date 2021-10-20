@@ -1,30 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-	ButtonActive,
-	StyledContent,
-	StyledHeading,
+  ButtonActive,
+  StyledContent,
+  StyledHeading,
 } from '../styles/ReuseableStyles';
 import {
-	firstBreakOutHomePage,
-	ThirdBreakOutHomePage,
-	FourthBreakOutHomePage,
+  firstBreakOutHomePage,
+  ThirdBreakOutHomePage,
+  FourthBreakOutHomePage,
 } from '../styles/MediaQueries';
 
 function SubscribeBox() {
-	return (
-		<StyledSubscribe>
-			<StyledSubscribeLeft>
-				<StyledHeading>Subscribe Now to Get Special Features!</StyledHeading>
-				<StyledContent>
-					Praesent mollis lobortis nisl nec laoreet.
-				</StyledContent>
-			</StyledSubscribeLeft>
-			<StyledSubscribeRight>
-				<StyledSubscribeButton>Subscribe Now</StyledSubscribeButton>
-			</StyledSubscribeRight>
-		</StyledSubscribe>
-	);
+  return (
+    <StyledSubscribe>
+      <StyledSubscribeLeft>
+        <StyledHeading>Subscribe Now to Get Special Features!</StyledHeading>
+        <StyledContent>
+          Praesent mollis lobortis nisl nec laoreet.
+        </StyledContent>
+      </StyledSubscribeLeft>
+      <StyledSubscribeRight>
+        <StyledSubscribeButton>Subscribe Now</StyledSubscribeButton>
+      </StyledSubscribeRight>
+    </StyledSubscribe>
+  );
 }
 const StyledSubscribe = styled.div`
 	width: 70%;
@@ -40,20 +40,20 @@ const StyledSubscribe = styled.div`
 	background-color: #ffffff;
 
 	${ThirdBreakOutHomePage({
-		flexDirection: 'column',
-	})}
+    flexDirection: 'column',
+  })}
 `;
 const StyledSubscribeLeft = styled.div`
 	width: 50%;
 	${ThirdBreakOutHomePage({
-		width: '100%',
-		margin: '2rem 0rem',
-	})}
+    width: '100%',
+    margin: '2rem 0rem',
+  })}
 `;
 const StyledSubscribeRight = styled.div`
 	${ThirdBreakOutHomePage({
-		margin: '1rem 0rem',
-	})}
+    margin: '1rem 0rem',
+  })}
 `;
 
 const StyledSubscribeButton = styled(ButtonActive)`
@@ -61,14 +61,14 @@ const StyledSubscribeButton = styled(ButtonActive)`
 	margin-right: 3rem;
 
 	${firstBreakOutHomePage({
-		padding: '1rem 3rem',
-		fontSize: '1.3rem',
-		marginRight: '0rem',
-	})}
+    padding: '1rem 3rem',
+    fontSize: '1.3rem',
+    marginRight: '0rem',
+  })}
 
 	${FourthBreakOutHomePage({
-		marginRight: '0rem',
-	})}
+    marginRight: '0rem',
+  })}
 `;
 
 export default SubscribeBox;

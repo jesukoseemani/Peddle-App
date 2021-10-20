@@ -10,21 +10,22 @@ import Plan from '../contexts/Plan';
 import Reviews from '../contexts/Reviews';
 
 function HomePage() {
-	return (
-		<StyledHome
-			exit='exit'
-			variants={pageAnimation}
-			initial='hidden'
-			animate='show'>
-			<Hero />
-			<Features />
-			<Plan />
-			<Reviews />
-			<Footer />
+  return (
+    <StyledHome
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
+      <Hero />
+      <Features />
+      <Plan />
+      <Reviews />
+      <Footer />
 
-			<ScrollTop />
-		</StyledHome>
-	);
+      <ScrollTop />
+    </StyledHome>
+  );
 }
 
 const StyledHome = styled(motion.div)`

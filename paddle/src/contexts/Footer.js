@@ -3,53 +3,53 @@ import styled from 'styled-components';
 import SubscribeBox from '../components/SubscribeBox';
 import { LogoParagraph } from '../styles/ReuseableStyles';
 import {
-	SecondBreakOutHomePage,
-	ThirdBreakOutHomePage,
+  SecondBreakOutHomePage,
+  ThirdBreakOutHomePage,
 } from '../styles/MediaQueries';
 
 function Footer() {
-	return (
-		<StyledFooter>
-			<SubscribeBox />
+  return (
+    <StyledFooter>
+      <SubscribeBox />
 
-			<StyledFooterFlex>
-				<StyledFooterDescription>
-					<LogoParagraph>PEDDLE</LogoParagraph>
+      <StyledFooterFlex>
+        <StyledFooterDescription>
+          <LogoParagraph>PEDDLE</LogoParagraph>
 
-					<StyledFooterDescriptionContent>
-						Praesent mollis lobortis nisl nec laoreet. Duis euismod nisl nec
-						ante egestas ullamcorper. Duis id mauris consequat, ultrices ligula
-						at, laoreet mag.
-					</StyledFooterDescriptionContent>
-				</StyledFooterDescription>
-				<WrapperList>
-					<StyledFooterList>
-						<StyledFooterListHeading>Product</StyledFooterListHeading>
-						<StyledFooterListItem>Praesent </StyledFooterListItem>
-						<StyledFooterListItem>Laoreet</StyledFooterListItem>
-						<StyledFooterListItem>Laoreet</StyledFooterListItem>
-						<StyledFooterListItem>Server</StyledFooterListItem>
-					</StyledFooterList>
+          <StyledFooterDescriptionContent>
+            Praesent mollis lobortis nisl nec laoreet. Duis euismod nisl nec
+            ante egestas ullamcorper. Duis id mauris consequat, ultrices ligula
+            at, laoreet mag.
+          </StyledFooterDescriptionContent>
+        </StyledFooterDescription>
+        <WrapperList>
+          <StyledFooterList>
+            <StyledFooterListHeading>Product</StyledFooterListHeading>
+            <StyledFooterListItem>Praesent </StyledFooterListItem>
+            <StyledFooterListItem>Laoreet</StyledFooterListItem>
+            <StyledFooterListItem>Laoreet</StyledFooterListItem>
+            <StyledFooterListItem>Server</StyledFooterListItem>
+          </StyledFooterList>
 
-					<StyledFooterList>
-						<StyledFooterListHeading>Engage</StyledFooterListHeading>
-						<StyledFooterListItem>Mauris</StyledFooterListItem>
-						<StyledFooterListItem>Aenean</StyledFooterListItem>
-						<StyledFooterListItem>Linsean</StyledFooterListItem>
-						<StyledFooterListItem>Lingula</StyledFooterListItem>
-					</StyledFooterList>
+          <StyledFooterList>
+            <StyledFooterListHeading>Engage</StyledFooterListHeading>
+            <StyledFooterListItem>Mauris</StyledFooterListItem>
+            <StyledFooterListItem>Aenean</StyledFooterListItem>
+            <StyledFooterListItem>Linsean</StyledFooterListItem>
+            <StyledFooterListItem>Lingula</StyledFooterListItem>
+          </StyledFooterList>
 
-					<StyledFooterList>
-						<StyledFooterListHeading>Earn Money</StyledFooterListHeading>
-						<StyledFooterListItem>Ultrices</StyledFooterListItem>
-						<StyledFooterListItem>Fusce</StyledFooterListItem>
-					</StyledFooterList>
-				</WrapperList>
-			</StyledFooterFlex>
+          <StyledFooterList>
+            <StyledFooterListHeading>Earn Money</StyledFooterListHeading>
+            <StyledFooterListItem>Ultrices</StyledFooterListItem>
+            <StyledFooterListItem>Fusce</StyledFooterListItem>
+          </StyledFooterList>
+        </WrapperList>
+      </StyledFooterFlex>
 
-			<StyledFooterCopyWrite>&copy;2020PEDDLE</StyledFooterCopyWrite>
-		</StyledFooter>
-	);
+      <StyledFooterCopyWrite>&copy;2020PEDDLE</StyledFooterCopyWrite>
+    </StyledFooter>
+  );
 }
 const StyledFooter = styled.div`
 	padding: 3rem 0rem;
@@ -64,21 +64,21 @@ const StyledFooterFlex = styled.div`
 	margin-top: 5rem;
 	margin-bottom: 5rem;
 	${SecondBreakOutHomePage({
-		padding: '0rem 5rem',
-	})}
+    padding: '0rem 5rem',
+  })}
 	${ThirdBreakOutHomePage({
-		flexDirection: 'column',
-		alignItems: 'center',
-		justifyContent: 'center',
-		marginTop: '5rem',
-	})}
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: '5rem',
+  })}
 `;
 const StyledFooterDescription = styled.div`
 	flex: 2;
 
 	${ThirdBreakOutHomePage({
-		textAlign: 'center',
-	})}
+    textAlign: 'center',
+  })}
 `;
 const StyledFooterDescriptionContent = styled.div`
 	font-size: 1.6rem;
@@ -86,10 +86,10 @@ const StyledFooterDescriptionContent = styled.div`
 	color: #4f5665;
 	width: 80%;
 	${ThirdBreakOutHomePage({
-		textAlign: 'center',
-		width: '100%',
-		marginBottom: '3rem',
-	})}
+    textAlign: 'center',
+    width: '100%',
+    marginBottom: '3rem',
+  })}
 `;
 
 const WrapperList = styled.div`
@@ -122,8 +122,8 @@ const StyledFooterCopyWrite = styled.p`
 	color: #afb5c0;
 
 	${SecondBreakOutHomePage({
-		padding: '0rem 5rem',
-	})}
+    padding: '0rem 5rem',
+  })}
 `;
 
 export default Footer;

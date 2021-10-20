@@ -3,80 +3,81 @@ import styled from 'styled-components';
 import { FlexContent } from '../styles/ReuseableStyles';
 import piano from '../images/piano.png';
 import {
-	firstBreakOutHomePage,
-	ThirdBreakOutHomePage,
-	FourthBreakOutHomePage,
+  firstBreakOutHomePage,
+  ThirdBreakOutHomePage,
+  FourthBreakOutHomePage,
 } from '../styles/MediaQueries';
+
 function Features() {
-	return (
-		<StyledFeatures>
-			<StyledFeaturesLeft>
-				<StyledFeaturesLeftImage src={piano} alt='piano' />
-			</StyledFeaturesLeft>
-			<StyledFeaturesRight>
-				<StyledFeaturesRightHeading>
-					Features We Provide For You
-				</StyledFeaturesRightHeading>
-				<StyledFeaturesRightParagraph>
-					Curabitur tempor justo non turpis malesuada cursus. Mauris ac libero
-					eu sem finibus lacinia nec pulvinar.
-				</StyledFeaturesRightParagraph>
-				<StyledFeaturesRightLists>
-					<StyledFeaturesRightListsItem>
-						<StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
-						<StyledFeaturesRightListsItemContent>
-							{' '}
-							Curabitur tempor justo
-						</StyledFeaturesRightListsItemContent>
-					</StyledFeaturesRightListsItem>
-					<StyledFeaturesRightListsItem>
-						<StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
-						<StyledFeaturesRightListsItemContent>
-							{' '}
-							Curabitur tempor justo
-						</StyledFeaturesRightListsItemContent>
-					</StyledFeaturesRightListsItem>
-					<StyledFeaturesRightListsItem>
-						<StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
-						<StyledFeaturesRightListsItemContent>
-							{' '}
-							Curabitur tempor justo
-						</StyledFeaturesRightListsItemContent>
-					</StyledFeaturesRightListsItem>
-					<StyledFeaturesRightListsItem>
-						<StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
-						<StyledFeaturesRightListsItemContent>
-							{' '}
-							Curabitur tempor justo
-						</StyledFeaturesRightListsItemContent>
-					</StyledFeaturesRightListsItem>
-				</StyledFeaturesRightLists>
-			</StyledFeaturesRight>
-		</StyledFeatures>
-	);
+  return (
+    <StyledFeatures>
+      <StyledFeaturesLeft>
+        <StyledFeaturesLeftImage src={piano} alt="piano" />
+      </StyledFeaturesLeft>
+      <StyledFeaturesRight>
+        <StyledFeaturesRightHeading>
+          Features We Provide For You
+        </StyledFeaturesRightHeading>
+        <StyledFeaturesRightParagraph>
+          Curabitur tempor justo non turpis malesuada cursus. Mauris ac libero
+          eu sem finibus lacinia nec pulvinar.
+        </StyledFeaturesRightParagraph>
+        <StyledFeaturesRightLists>
+          <StyledFeaturesRightListsItem>
+            <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
+            <StyledFeaturesRightListsItemContent>
+              {' '}
+              Curabitur tempor justo
+            </StyledFeaturesRightListsItemContent>
+          </StyledFeaturesRightListsItem>
+          <StyledFeaturesRightListsItem>
+            <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
+            <StyledFeaturesRightListsItemContent>
+              {' '}
+              Curabitur tempor justo
+            </StyledFeaturesRightListsItemContent>
+          </StyledFeaturesRightListsItem>
+          <StyledFeaturesRightListsItem>
+            <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
+            <StyledFeaturesRightListsItemContent>
+              {' '}
+              Curabitur tempor justo
+            </StyledFeaturesRightListsItemContent>
+          </StyledFeaturesRightListsItem>
+          <StyledFeaturesRightListsItem>
+            <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
+            <StyledFeaturesRightListsItemContent>
+              {' '}
+              Curabitur tempor justo
+            </StyledFeaturesRightListsItemContent>
+          </StyledFeaturesRightListsItem>
+        </StyledFeaturesRightLists>
+      </StyledFeaturesRight>
+    </StyledFeatures>
+  );
 }
 
 const StyledFeatures = styled(FlexContent)`
 	padding: 10rem 10rem;
 	${FourthBreakOutHomePage({
-		padding: '0rem 5rem',
-	})}
+    padding: '0rem 5rem',
+  })}
 
 	${ThirdBreakOutHomePage({
-		flexDirection: 'column',
-	})}
+    flexDirection: 'column',
+  })}
 `;
 const StyledFeaturesLeft = styled.div`
 	${ThirdBreakOutHomePage({
-		marginBottom: '2rem',
-	})}
+    marginBottom: '2rem',
+  })}
 `;
 const StyledFeaturesRight = styled.div`
 	${ThirdBreakOutHomePage({
-		display: 'flex',
-		flexDirection: 'column',
-		alignItems: 'center',
-	})}
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  })}
 `;
 const StyledFeaturesLeftImage = styled.img`
 	width: 95%;
@@ -91,13 +92,13 @@ const StyledFeaturesRightHeading = styled.h1`
 	margin-bottom: 1rem;
 
 	${firstBreakOutHomePage({
-		fontSize: '2.5rem',
-	})}
+    fontSize: '2.5rem',
+  })}
 
 	${ThirdBreakOutHomePage({
-		textAlign: 'center',
-		fontSize: '3.5rem',
-	})}
+    textAlign: 'center',
+    fontSize: '3.5rem',
+  })}
 `;
 const StyledFeaturesRightParagraph = styled.p`
 	font-family: Rubik;
@@ -106,13 +107,13 @@ const StyledFeaturesRightParagraph = styled.p`
 	line-height: 3rem;
 	color: #4f5665;
 	${firstBreakOutHomePage({
-		fontSize: '1.2rem',
-	})}
+    fontSize: '1.2rem',
+  })}
 
 	${ThirdBreakOutHomePage({
-		textAlign: 'center',
-		fontSize: '1.6rem',
-	})}
+    textAlign: 'center',
+    fontSize: '1.6rem',
+  })}
 `;
 const StyledFeaturesRightLists = styled.ul``;
 const StyledFeaturesRightListsItem = styled.li`

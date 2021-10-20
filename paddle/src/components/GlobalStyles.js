@@ -21,8 +21,8 @@ html{
         }
 
         ${SecondBreakOutGithub({
-					fontSize: '8px',
-				})}
+    fontSize: '8px',
+  })}
 }
 body{
     background-color: #E5E5E5;
