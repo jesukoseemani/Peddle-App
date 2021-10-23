@@ -34,7 +34,7 @@ function Plan() {
     {
       image: `${pricing2}`,
       plan: 'Standard Plan',
-      amount: '$9',
+      amount: '$59',
       description: [
         'Mauris sem neque',
         'Mauris sem neque',
@@ -48,7 +48,7 @@ function Plan() {
     {
       image: `${pricing3}`,
       plan: 'Premium Plan',
-      amount: '$12',
+      amount: '$120',
       description: [
         'Mauris sem neque',
         'Mauris sem neque',

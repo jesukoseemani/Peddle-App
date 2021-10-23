@@ -19,36 +19,35 @@ function Features() {
           Features We Provide For You
         </StyledFeaturesRightHeading>
         <StyledFeaturesRightParagraph>
-          Curabitur tempor justo non turpis malesuada cursus. Mauris ac libero
-          eu sem finibus lacinia nec pulvinar.
+          Leaverage our decade-long expertise in IT strategy consulting, product engineering and mobile development.
         </StyledFeaturesRightParagraph>
         <StyledFeaturesRightLists>
           <StyledFeaturesRightListsItem>
             <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
             <StyledFeaturesRightListsItemContent>
               {' '}
-              Curabitur tempor justo
+              Digital Marketing
             </StyledFeaturesRightListsItemContent>
           </StyledFeaturesRightListsItem>
           <StyledFeaturesRightListsItem>
             <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
             <StyledFeaturesRightListsItemContent>
               {' '}
-              Curabitur tempor justo
+              Mobile Development
             </StyledFeaturesRightListsItemContent>
           </StyledFeaturesRightListsItem>
           <StyledFeaturesRightListsItem>
             <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
             <StyledFeaturesRightListsItemContent>
               {' '}
-              Curabitur tempor justo
+              IT Consulting
             </StyledFeaturesRightListsItemContent>
           </StyledFeaturesRightListsItem>
           <StyledFeaturesRightListsItem>
             <StyledFeaturesRightListsItemBox> </StyledFeaturesRightListsItemBox>
             <StyledFeaturesRightListsItemContent>
               {' '}
-              Curabitur tempor justo
+              UI/UX Design & Dvelopment
             </StyledFeaturesRightListsItemContent>
           </StyledFeaturesRightListsItem>
         </StyledFeaturesRightLists>

@@ -29,9 +29,7 @@ function Hero() {
             We Are Everything We Aspire To BE
           </GetStartedLeftHeading>
           <GetStartedLeftParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
-            orci condimentum lectus efficitur tempor vel eu massa. Sed molestie
-            turpis eget ipsum malesuada dignissim
+            	We combine technology with innovation, creativity, and strategy to solve complex business problems and help you go beyond regular transactions and create memorable experiences.
           </GetStartedLeftParagraph>
           <GetStartedLeftButton>Get Started</GetStartedLeftButton>
         </GetStartedLeft>
